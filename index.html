@@ -1,19 +1,28 @@
+Muokataan HTML-tiedostoa niin, että taustalle tulee avaruusmaisema tähtineen ja teksti on kirjoitettu suomeksi Rauman murteella.
+
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice Page</title>
+    <title>Harjoitussivu</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            background-color: black;
+            color: white;
+            background-image: url('https://example.com/space-background.jpg'); /* Vaihda tähän oikea URL tähtitaustakuvalle */
+            background-size: cover;
+            background-attachment: fixed;
         }
         .container {
             border: 2px dashed #4CAF50;
             padding: 20px;
             display: inline-block;
+            background: rgba(0, 0, 0, 0.7);
         }
         .emoji {
             font-size: 50px;
@@ -22,11 +31,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Beginner's Practice Page!</h1>
-        <p>This is a place where HTML rookies can hone their skills.</p>
-        <p>Feel free to experiment, make mistakes, and have fun!</p>
+        <h1>Tervetuloa alottelijjan harjoitussivulle!</h1>
+        <p>Tämä o paikka, missä HTML:n aloittelijat voiva harjoitella taitojaan.</p>
+        <p>Älä epäröi kokeilla, tehä virheit ja pitää hauskaa!</p>
         <p class="emoji">😜</p>
-        <p>Remember: Even the best developers started here!</p>
+        <p>Muista: Jopa parhaat kehittäjät alotti täältä!</p>
     </div>
 </body>
 </html>
+```
+
+Tässä on päivitetty HTML-koodi. Voit kopioida ja liittää sen `index.html`-tiedostoosi. Muista vaihtaa `background-image`-kohdan URL oikeaan tähtitaustakuvaan.
