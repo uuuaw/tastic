@@ -1,51 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirjaimet ja Numerot Ympyrässä</title>
+    <title>Ihmettelevä IT-nörtti</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .circle {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            border: 2px solid #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .box {
-            width: 80%;
-            height: 80%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background-color: #ffcc00;
+            color: #000;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
-            font-size: 20px;
-            overflow-wrap: break-word;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff0000;
+            text-shadow: 2px 2px #000;
+        }
+        p {
+            font-size: 1.5em;
+            color: #0000ff;
+            text-shadow: 1px 1px #fff;
+        }
+        .highlight {
+            color: #00ff00;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="circle">
-        <div class="box" id="content"></div>
-    </div>
-
-    <script>
-        const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        let output = "";
-        for (let i = 0; i < 100; i++) {
-            output += characters[Math.floor(Math.random() * characters.length)];
-        }
-        document.getElementById('content').textContent = output;
-    </script>
+    <h1>Ihmettelevä IT-nörtti on palannut!</h1>
+    <p>Vuosikymmenten jälkeen <span class="highlight">harjoitusinto</span> on huipussaan, mutta taidot ovat hieman ruosteessa.</p>
+    <p>Valmistaudu värien ilotulitukseen ja teknisiin kommelluksiin!</p>
+    <p>Värit huutavat ja koodit sekoilevat, mutta intoa riittää!</p>
 </body>
 </html>
