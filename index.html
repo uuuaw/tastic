@@ -3,54 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Text Aggregator</title>
+    <title>Satunnaiset Kirjaimet</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-        }
-        #content {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .text-block {
-            width: 30%;
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            white-space: pre-wrap;
         }
     </style>
 </head>
 <body>
-    <h1>Random Text Aggregator</h1>
-    <div id="content"></div>
-
     <script>
-        const urls = [
-            'https://example.com/api/text1',
-            'https://example.com/api/text2',
-            'https://example.com/api/text3'
-        ];
-
-        async function fetchText(url) {
-            const response = await fetch(url);
-            const data = await response.text();
-            return data.split(' ').slice(0, 44).join(' ');
-        }
-
-        async function loadTexts() {
-            const contentDiv = document.getElementById('content');
-            for (const url of urls) {
-                const text = await fetchText(url);
-                const textBlock = document.createElement('div');
-                textBlock.className = 'text-block';
-                textBlock.textContent = text;
-                contentDiv.appendChild(textBlock);
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let output = "";
+        for (let i = 0; i < 1000; i++) {
+            output += letters[Math.floor(Math.random() * letters.length)];
+            if ((i + 1) % 50 === 0) {
+                output += "\n";
             }
         }
-
-        loadTexts();
+        document.body.textContent = output;
     </script>
 </body>
 </html>
