@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Värikäs Sikinsokin Teksti</title>
+    <style>
+        body {
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .content {
+            font-size: 4rem;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .letter {
+            padding: 10px;
+            transition: transform 0.2s;
+        }
+
+        .letter:hover {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <span class="letter" style="color: #ff6347;">A</span>
+        <span class="letter" style="color: #4682b4;">B</span>
+        <span class="letter" style="color: #32cd32;">C</span>
+        <span class="letter" style="color: #ff1493;">D</span>
+        <span class="letter" style="color: #1e90ff;">E</span>
+        <span class="letter" style="color: #ff4500;">F</span>
+        <span class="letter" style="color: #8a2be2;">G</span>
+        <span class="letter" style="color: #ff8c00;">H</span>
+        <span class="letter" style="color: #adff2f;">I</span>
+        <span class="letter" style="color: #f0e68c;">J</span>
+        <span class="letter" style="color: #b22222;">K</span>
+        <span class="letter" style="color: #7fff00;">L</span>
+        <span class="letter" style="color: #d2691e;">M</span>
+        <span class="letter" style="color: #8b0000;">N</span>
+        <span class="letter" style="color: #ff00ff;">O</span>
+        <span class="letter" style="color: #00ffff;">P</span>
+        <span class="letter" style="color: #ff6347;">Q</span>
+        <span class="letter" style="color: #ff1493;">R</span>
+        <span class="letter" style="color: #32cd32;">S</span>
+        <span class="letter" style="color: #4682b4;">T</span>
+        <span class="letter" style="color: #ff4500;">U</span>
+        <span class="letter" style="color: #8a2be2;">V</span>
+        <span class="letter" style="color: #ff8c00;">W</span>
+        <span class="letter" style="color: #adff2f;">X</span>
+        <span class="letter" style="color: #f0e68c;">Y</span>
+        <span class="letter" style="color: #b22222;">Z</span>
+    </div>
+
+    <script>
+        const letters = document.querySelectorAll('.letter');
+        const colors = ['#ff6347', '#4682b4', '#32cd32', '#ff1493', '#1e90ff', '#ff4500', '#8a2be2', '#ff8c00', '#adff2f', '#f0e68c', '#b22222', '#7fff00', '#d2691e', '#8b0000', '#ff00ff', '#00ffff'];
+
+        function shuffleLetters() {
+            letters.forEach(letter => {
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                letter.style.color = randomColor;
+                letter.style.transform = `rotate(${Math.random() * 360}deg)`;
+                letter.style.top = `${Math.random() * 80}%`;
+                letter.style.left = `${Math.random() * 80}%`;
+            });
+        }
+
+        setInterval(shuffleLetters, 1000);
+    </script>
+</body>
+</html>
